@@ -70,7 +70,7 @@
 
 						<div id="primary-menu-trigger" class="order-1 order-lg-2"><i class="icon-reorder"></i></div>
 
-						<div class="header-misc order-3 order-lg-last d-none d-md-block">
+						<div class="header-misc order-3 order-lg-last">
 							<div class="d-flex mb-lg-5">
 								<a href="https://www.facebook.com/webbees4/" class="social-icon si-small si-rounded si-colored si-facebook" target="_blank">
 									<i class="icon-facebook"></i>
@@ -719,7 +719,7 @@
 							<div id="q-contact" class="widget quick-contact-widget form-widget clearfix">
 
 								<h4 class="nott ls0">Quick Contact</h4>
-								<div class="form-result" id="form-result" data-notify-type="info" data-notify-msg="Thank you for contacting us. We will get back to you soon."></div>
+								<div class="form-result"></div>
 								<form id="quick-contact-form" name="quick-contact-form" class="quick-contact-form mb-0" 
 								action="https://formspree.io/maylyezy"
 								method="POST">
@@ -888,18 +888,18 @@
 	  
 	  var form = document.getElementById("quick-contact-form");
 	  var button = document.getElementById("quick-contact-form-submit");
-	  var status = document.getElementById("form-result");
+	  var status = document.getElementById("my-form-status");
   
 	  // Success and Error functions for after the form is submitted
 	  
 	  function success() {
 		form.reset();
-		//button.style = "color:grey ";
-		status.innerHTML = "Thank you for contacting us. We will get back to you soon.";
+		button.style = "display: none ";
+		status.innerHTML = "Thanks!";
 	  }
   
 	  function error() {
-		status.innerHTML = "Please fill out all fields!!";
+		status.innerHTML = "Oops! There was a problem.";
 	  }
   
 	  // handle the form submission event
@@ -907,16 +907,11 @@
 	  form.addEventListener("submit", function(ev) {
 		ev.preventDefault();
 		var data = new FormData(form);
-		var name = document.forms["quick-contact-form"]["name"].value;
-		var email = document.forms["quick-contact-form"]["email"].value;
-		var phone = document.forms["quick-contact-form"]["phone"].value;
-		var message = document.forms["quick-contact-form"]["message"].value;
-		if (name == null || name == "", email == null || email == "", phone == null || phone == "", message == null || message == "") {
+		if ($(".quick-contact-form .error").length > 0){ 
 		///do something
-		error();
-		}else{
-		ajax(form.method, form.action, data, success, error);
+		error=true;
 		}
+		ajax(form.method, form.action, data, success, error);
 	  });
 	});
 	

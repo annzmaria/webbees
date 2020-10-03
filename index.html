@@ -287,7 +287,7 @@
 							<!-- SLIDE  -->
 							<li data-index="rs-355" data-transition="fade" data-slotamount="default" data-hideafterloop="0" data-hideslideonmobile="off"  data-easein="default" data-easeout="default" data-masterspeed="300"  data-thumb="assets/images/slider/100x50_7f864-3.jpg"  data-rotate="0"  data-saveperformance="off"  data-title="Slide" data-param1="" data-param2="" data-param3="" data-param4="" data-param5="" data-param6="" data-param7="" data-param8="" data-param9="" data-param10="" data-description="">
 								<!-- MAIN IMAGE -->
-								<img src="assets/images/slider/banner3.jpg"  alt="Image"  data-bgposition="center center" data-bgfit="cover" data-bgrepeat="no-repeat" data-bgparallax="off" class="rev-slidebg" data-no-retina>
+								<img src="assets/images/slider/banner3.png"  alt="Image"  data-bgposition="center center" data-bgfit="cover" data-bgrepeat="no-repeat" data-bgparallax="off" class="rev-slidebg" data-no-retina>
 								<!-- LAYERS -->
 
 								<!-- LAYER NR. 7 -->
@@ -575,7 +575,7 @@
 				
 				<!-- Section Process
 				============================================= -->
-				<div id="process" class="section page-section bg-light">
+				<div id="process" class="section page-section bg-transparent">
 
 					<div class="container">
 						<!-- Heading -->
@@ -660,6 +660,9 @@
 
 						</div>
 					</div>
+					<div class="hero__background" data-colour="#1c2a35">
+						<canvas id="heroCanvas" resize></canvas>
+					</div>
 				</div>
 
 				<!-- Section Portfolio
@@ -674,7 +677,7 @@
 					</div>
 
 					<!-- Background Image -->
-					<img src="assets/images/others/nailpolish.png" alt="Image" style="position: absolute; right: 20px; bottom: -80px; width: 270px; height: auto; opacity: 1; ">
+					<!-- <img src="assets/images/others/nailpolish.png" alt="Image" style="position: absolute; right: 20px; bottom: -80px; width: 270px; height: auto; opacity: 1; "> -->
 
 				</div>
 			</div>
@@ -770,7 +773,68 @@
 	============================================= -->
 	<script src="assets/js/jquery.js"></script>
 	<script src="assets/js/plugins.min.js"></script>
-
+	<script src="assets/js/paper-full.js"></script>
+	<script type="text/paperscript" canvas="heroCanvas">
+				// your code here. 
+				"use strict";
+				var canvasData = document.querySelector(".hero__background");
+				if (canvasData) {
+					var canvasColours = canvasData.getAttribute("data-colour");
+					if (canvasColours) {
+						var width,
+							height,
+							center,
+							points = 3,
+							smooth = !0,
+							path = new Path({ strokeColor: canvasColours || "#1c2a35", strokeWidth: 1 }),
+							path2 = new Path({ strokeColor: canvasColours || "#1c2a35", strokeWidth: 3, dashArray: [1, 10], strokeCap: "round" }),
+							path3 = new Path({ strokeColor: canvasColours || "#1c2a35", strokeWidth: 1 }),
+							mousePos = view.center / 2,
+							pathHeight = mousePos.y;
+						initializePath();
+					}
+				}
+				function initializePath() {
+					(center = view.center), (width = view.size.width), (height = view.size.height / 2), (path.segments = []), path.add(0, center.y + height / 10);
+					for (var t = 1; t < points; t++) {
+						var e = new Point((width / points) * t, center.y);
+						path.add(e);
+					}
+					path.add(width, center.y + height / 8), (path2.segments = []), path2.add(0, center.y - height / 15);
+					for (t = 1; t < points; t++) {
+						e = new Point((width / points) * t, center.y);
+						path2.add(e);
+					}
+					path2.add(width, center.y + height / 5), (path3.segments = []), path3.add(0, center.y + height / 20);
+					for (t = 1; t < points; t++) {
+						e = new Point((width / points) * t, center.y);
+						path3.add(e);
+					}
+					path3.add(width, center.y + height / 15);
+				}
+				function onFrame(t) {
+					pathHeight += (center.y - mousePos.y - pathHeight) / 80;
+					for (var e = 1; e < points; e++) {
+						var a = t.count + 100 * (e + (e % 10)),
+							h = Math.sin(a / 200) * pathHeight,
+							o = Math.sin(a / 100) * h + height;
+						path.segments[e].point.y = o;
+					}
+					for (e = 1; e < points; e++) {
+						(a = t.count + 50 * (e + (e % 3))), (h = Math.sin(a / 200) * pathHeight), (o = Math.sin(a / 100) * h + height);
+						path2.segments[e].point.y = o;
+					}
+					for (e = 1; e < points; e++) {
+						(a = t.count + 80 * (e + (e % 2))), (h = Math.sin(a / 200) * pathHeight), (o = Math.sin(a / 100) * h + height);
+						path3.segments[e].point.y = o;
+					}
+					smooth && path.smooth({ type: "continuous" }), smooth && path2.smooth({ type: "continuous" }), smooth && path3.smooth({ type: "continuous" });
+				}
+				function onResize(t) {
+					initializePath();
+				}
+	</script>
+	
 	<!-- For Countdown -->
 	<script src="assets/js/components/moment.js"></script>
 
@@ -784,7 +848,7 @@
 
 	<!-- Footer Scripts
 	============================================= -->
-	<script src="assets/js/functions.js"></script>
+	<!-- <script src="assets/js/functions.js"></script> -->
 
 	<script>
 

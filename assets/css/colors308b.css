@@ -136,8 +136,57 @@ input.switch-toggle-flat:checked + label::after,
 .page-link:hover,
 .page-link:focus { background-color: #fdb11d !important; }
 
+.hero--light .hero__background {
+    stroke: #fff;
+}
+@media all and (min-width: 768px) {
+    .hero--light .hero__background {
+        stroke: rgba(255, 255, 255, 0.6);
+    }
+}
+@media all and (min-width: 1440px) {
+    .hero--light .hero__background {
+        stroke: rgba(255, 255, 255, 0.3);
+    }
+}
+@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+    .hero--full {
+        min-height: 100vh;
+        min-height: calc(var(--vh, 1vh) * 100);
+    }
+}
+.hero__background {
+    bottom: 0;
+    height: 100%;
+    left: 0;
+    overflow: hidden;
+    position: absolute;
+    width: 100%;
+    opacity: 0.35;
+}
+@media all and (min-width: 768px) {
+    .hero__background {
+        opacity: 0.4;
+    }
+}
+@media all and (min-width: 1440px) {
+    .hero__background {
+        opacity: 0.5;
+    }
+}
+.hero__background canvas {
+    bottom: -40%;
+    height: 100%;
+    left: 0;
+    position: absolute;
+    width: 100%;
+}
 .bg-light {
     background-color: #f7f7f7!important;
+}
+audio, canvas, progress, video {
+    display: inline-block;
+    vertical-align: baseline;
 }
 @media (min-width: 1200px){
 	.section__inline-hero--img {

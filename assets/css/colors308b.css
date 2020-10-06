@@ -466,6 +466,16 @@ h4.gradient-title:hover {
     left: calc(50% - 42.5px);
 }
 
+.section {
+	margin: 0px;
+}
+
+.bg-curve{
+	background: url(../images/others/Wave_From_Right_829x590.png) no-repeat center;
+    background-position-x: right;
+    background-position-y: 0;
+}
+
 
 .bootstrap-switch .bootstrap-switch-handle-on.bootstrap-switch-themecolor,
 .bootstrap-switch .bootstrap-switch-handle-off.bootstrap-switch-themecolor,

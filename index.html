@@ -33,7 +33,8 @@
 	<!-- SLIDER REVOLUTION 5.x CSS SETTINGS -->
 	<link rel="stylesheet" type="text/css" href="assets/include/rs-plugin/css/settings.css" media="screen" />
 	<link rel="stylesheet" type="text/css" href="assets/include/rs-plugin/css/layers.css">
-	<link rel="stylesheet" type="text/css" href="assets/include/rs-plugin/css/navigation.css">
+	
+	<link rel="stylesheet" type="text/css" href="assets/css/carousel.css">
 	<!-- Document Title
 	============================================= -->
 	<title>Web Bees | Web Design Company</title>
@@ -683,13 +684,107 @@
 
 				<!-- Section Portfolio
 				============================================= -->
-				<div id="portfolio" class="section bg-transparent mb-0 mt-5 page-section">
+				<div id="portfolio" class="section slider-2 bg-transparent mb-0 mt-5 pt-lg-0 pb-lg-0 pt-5 z-top page-section">
 					<div class="container">
-						<div class="row justify-content-between bottommargin">
-
-							
-
-						</div>
+						<div class="owl-carousel owl-slider-2 owl-theme">
+                        <div class="item row align-items-center text-center text-lg-left">
+                            <div class="col-sm-12 col-lg-6 col-xl-7 slider-2-content">
+                                <div class="animate-slide-item">
+                                    <h4>Social Media</h4>
+                                    <h1>AutoConnect</h1>
+                                    <p>Find a reliable car from authorized dealers or sell your car instantly, fostering a relationship that goes beyond the deal. Whether you are looking for a new, slightly used, or a vintage car, AutoConnect is the platform for you.</p>
+                              
+                                </div>
+                            </div>
+                            <div class="col-sm-12 col-lg-6 col-xl-5 slider-right">
+                                <div class="img-wrap">
+                                    <div class="left">
+                                        <div class="inner">
+                                            <img src="https://cubix.co/aff/themes/cubix//assets/images/app/auto-connect-1.png">
+                                        </div>
+                                    </div>
+                                    <div class="right">
+                                        <div class="inner">
+                                            <img src="https://cubix.co/aff/themes/cubix//assets/images/app/auto-connect-2.png">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item row align-items-center text-center text-lg-left">
+                            <div class="col-sm-12 col-lg-6 col-xl-7 slider-2-content">
+                                <div class="animate-slide-item">
+                                    <h4>Augmented Reality</h4>
+                                    <h1>Redline Athletics</h1>
+                                    <p>Redline Athletics was built with an athlete in mind to track success and give an accurate measure of multiple baseline tests commonly utilized for sports; including but not limited to: vertical jump, sprint, cone drills, and many more.</p>
+                            
+                                </div>
+                            </div>
+                            <div class="col-sm-12 col-lg-6 col-xl-5 slider-right">
+                                <div class="img-wrap">
+                                    <div class="left">
+                                        <div class="inner">
+                                            <img src="https://cubix.co/aff/themes/cubix/assets/images/app/redline1.png">
+                                        </div>
+                                    </div>
+                                    <div class="right">
+                                        <div class="inner">
+                                            <img src="https://cubix.co/aff/themes/cubix/assets/images/app/redline2.png">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item row align-items-center text-center text-lg-left">
+                            <div class="col-sm-12 col-lg-6 col-xl-7 slider-2-content">
+                                <div class="animate-slide-item">
+                                    <h4>Social Media</h4>
+                                    <h1>Likehoop</h1>
+                                    <p>Social media is on the go and so is Likehoop — A social media app specifically developed for iOS users. Likehoop is a platform to discover day to day social tasks and you can always manage or share them via your profile.</p>
+                           
+                                </div>
+                            </div>
+                            <div class="col-sm-12 col-lg-6 col-xl-5 slider-right">
+                                <div class="img-wrap">
+                                    <div class="left">
+                                        <div class="inner">
+                                            <img src="https://cubix.co/aff/themes/cubix//assets/images/app/like-hoops-1.png">
+                                        </div>
+                                    </div>
+                                    <div class="right">
+                                        <div class="inner">
+                                            <img src="https://cubix.co/aff/themes/cubix//assets/images/app/like-hoops-2.png">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item row align-items-center text-center text-lg-left">
+                            <div class="col-sm-12 col-lg-6 col-xl-7 slider-2-content">
+                                <div class="animate-slide-item">
+                                    <h4>e-Commerce / Marketplace</h4>
+                                    <h1>Today Today</h1>
+                                    <p>Get fresh and organic food items delivered to your address and prepare delicious meals for your family and friends. A platform that delivers organic and nutritious items to prepare delicious meals.</p>
+                
+                                </div>
+                            </div>
+                            <div class="col-sm-12 col-lg-6 col-xl-5 slider-right">
+                                <div class="img-wrap">
+                                    <div class="left">
+                                        <div class="inner">
+                                            <img src="https://cubix.co/aff/themes/cubix/assets/images/app/today-today-1.png">
+                                        </div>
+                                    </div>
+                                    <div class="right">
+                                        <div class="inner">
+                                            <img src="https://cubix.co/aff/themes/cubix/assets/images/app/today-today-2.png">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                        </div>
+                    </div>
 					</div>
 
 					<!-- Background Image -->
@@ -864,7 +959,6 @@
 
 	<!-- Footer Scripts
 	============================================= -->
-	<!-- <script src="assets/js/functions.js"></script> -->
 
 	<script>
 
@@ -1028,6 +1122,38 @@
 	  };
 	  xhr.send(data);
 	}
+
+
+	$(document).ready(function(){
+	$(".owl-slider-2").owlCarousel({
+            margin: 30,
+            items: 1,
+			autoplay:true,
+    		autoplayTimeout:3000,
+    		autoplayHoverPause:true,
+            responsive:{
+                0:{
+                    margin: -30
+                },
+                768:{
+                    margin: 30
+                }
+            },
+            nav: false,
+            dots: false,
+            animateOut: 'fadeOut',
+            animateIn: 'fadeIn',
+            stagePadding:30,
+            smartSpeed:450,
+            touchDrag: false,
+            mouseDrag: false,
+            autoWidth:false,
+            center: true,
+            loop: true,
+
+		});
+	});
+
   </script>
 </body>
 

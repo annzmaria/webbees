@@ -121,7 +121,7 @@ input.switch-toggle-flat:checked + label::after,
 .dark #gotoTop:hover,
 .dark input.switch-toggle-round:checked + label::before,
 .dark input.switch-toggle-flat:checked + label,
-.dark input.switch-toggle-flat:checked + label::after { background-color: #fdb11d; }
+.dark input.switch-toggle-flat:checked + label::after { background-color:#090803; }
 
 .bg-color,
 .bg-color #header-wrap,
@@ -138,6 +138,11 @@ input.switch-toggle-flat:checked + label::after,
 
 .hero--light .hero__background {
     stroke: #fff;
+}
+#header-wrap{
+	background: url(http://localhost/webbees/assets/images/wq3-1-1.png) no-repeat center;
+    background-position-x: 62%;
+    background-position-y: 246%;
 }
 @media all and (min-width: 768px) {
     .hero--light .hero__background {
@@ -475,7 +480,100 @@ h4.gradient-title:hover {
     background-position-x: right;
     background-position-y: 0;
 }
+.tablet-up {
+	display: block;
+}
 
+.tablet-and-under {
+	display: none;
+}
+#footer{
+	background: url(../images/others/footer-bg2.png) center top / cover;
+    background-position-x: 0;
+}
+.single_image_wrapper{
+	position: absolute;
+    overflow: hidden;
+    display: inline-block;
+    vertical-align: top;
+    max-width: 100%;
+    left: 26%;
+    top: 6%;
+}
+.footer-widgets-wrap{
+	padding-top: 80px;
+    padding-bottom: 15px;
+}
+/*--------------------------------------------------------------
+## 12.0 Medium Devices, Desktops
+--------------------------------------------------------------*/
+@media only screen and (max-width : 992px) {
+	/** Services Our Process Mobile **/
+	.tablet-up {
+		display: none;
+	}
+
+	.tablet-and-under {
+		display: block;
+	}
+	.services-our-process-step {
+		margin-left: 5%;
+		margin-right: 5%;
+	}
+
+	.services-our-process-mobile-arrow-container {
+		margin-top: 22.5px;
+		margin-right: 21px;
+	}
+
+	.arrow-down {
+		width: 9px;
+		height: 101px;
+	}
+
+	.services-our-process-step h3 {
+		font-size: 18px;
+		margin-bottom: 16px;
+	}
+
+	.services-our-process-step-text {
+		font-size: 16px;
+		width: 100%;
+		max-width: 100%;
+		margin-bottom: 50px;
+	}
+
+	.services-our-process-icon {
+		margin-right: 0;
+		margin-bottom: 16px;
+	}
+
+	.discovery-icon {
+		width: 58px;
+		height: 45px;
+	}
+
+	.design-icon {
+		width: 51.8px;
+		height: 51px;
+	}
+
+	.dev-icon {
+		width: 51px;
+		height: 41px;
+	}
+
+	.launch-icon {
+		width: 47px;
+		height: 46px;
+	}
+
+	.services-work-together {
+		margin-top: 50px;
+		margin-bottom: 70px;
+	}
+
+}
 
 .bootstrap-switch .bootstrap-switch-handle-on.bootstrap-switch-themecolor,
 .bootstrap-switch .bootstrap-switch-handle-off.bootstrap-switch-themecolor,

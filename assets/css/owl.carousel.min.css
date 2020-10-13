@@ -84,10 +84,10 @@
 
 @media (max-width:1199px){.img-wrap{min-width:470px;height:435px}.slider-2 .slider-right .img-wrap .left{max-width:338px}.slider-2 .slider-right .img-wrap .right{left:160px;max-width:280px}img.right{max-width:350px}img.left{max-width:398px}.owl-slider .owl-item img{width:50%}.slider-img{min-width:400px}.clutch-wrap{padding-top:30px}}
 
-@media (max-width:991px){.slider-2 h4{line-height:20px;font-size:18px!important}.slider-2 .slider-right .img-wrap .main{margin:0 auto;left:-40px;top:10px;position:relative;width:58%}.slider-right{margin-top:-70px}.image-bg{display:none}.img-wrap{left:50%;right:50%;transform:translateX(-38%);bottom:-100px}.slider{padding:80px 0}}
+@media (max-width:991px){.slider-2 h4{line-height:20px;font-size:18px!important}.slider-2 .slider-right .img-wrap .main{margin:0 auto;left:-40px;top:10px;position:relative;width:58%}.slider-right{margin-top:-70px}.image-bg{display:none}.img-wrap{left:56%;right:50%;transform:translateX(-38%);bottom:-100px}.slider{padding:80px 0}}
 
 @media (max-width:767px){.slider-2-content{padding-left:0;padding-right:0}.slider-2 .slider-right .img-wrap .right{top:60px;left:129px;width:230px}.slider-2 .slider-right .img-wrap .left{max-width:278px}.img-wrap{min-width:320px;height:370px;transform:translateX(-35%)}.slider-2 .owl-carousel .owl-next{right:-30px;top:35%}.slider-2 .owl-carousel .owl-prev{left:-30px;top:35%}}
 
-@media (max-width:575px){.owl-slider .h-100vh,.slider.h-100vh{height:auto}.img-wrap{transform:translateX(-50%);height:420px}.slider-2 .slider-right .img-wrap .right{top:45px;left:129px;width:215px}.slider-2 .slider-right .img-wrap .left{max-width:248px}.slider{padding-top:100px}.slider-2 .owl-carousel .owl-next{right:-18px}.slider-2 .owl-carousel .owl-prev{left:-18px}}
+@media (max-width:575px){.owl-slider .h-100vh,.slider.h-100vh{height:auto}.img-wrap{transform:translateX(-50%);height:420px}.slider-2 .slider-right .img-wrap .right{top:45px;left:129px;width:215px}.slider-2 .slider-right .img-wrap .left{max-width:285px}.slider{padding-top:100px}.slider-2 .owl-carousel .owl-next{right:-18px}.slider-2 .owl-carousel .owl-prev{left:-18px}}
 
 

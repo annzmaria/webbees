@@ -90,7 +90,7 @@ function debounce(e, i, n) {
     };
 }
 function onScrollSliderParallax() {
-    SEMICOLON.slider.sliderParallax(), SEMICOLON.slider.sliderElementsFade();
+    WEBBEES.slider.sliderParallax(), WEBBEES.slider.sliderElementsFade();
 }
 ($.fn.scrollEnd = function (e, i) {
     $(this).scroll(function () {
@@ -117,20 +117,20 @@ function onScrollSliderParallax() {
                     clearTimeout(e);
                 });
     })();
-var SEMICOLON = SEMICOLON || {};
+var WEBBEES = WEBBEES || {};
 !(function (e) {
     "use strict";
-    (SEMICOLON.initialize = {
+    (WEBBEES.initialize = {
         init: function () {
-            SEMICOLON.initialize.defaults(),
-                SEMICOLON.initialize.pageTransition(),
-                SEMICOLON.initialize.goToTop(),
-                SEMICOLON.initialize.lazyLoad(),
-                SEMICOLON.initialize.lightbox(),
-                SEMICOLON.initialize.resizeVideos(),
-                SEMICOLON.initialize.dataResponsiveClasses(),
-                SEMICOLON.initialize.dataResponsiveHeights(),
-                SEMICOLON.initialize.stickFooterOnSmall();
+            WEBBEES.initialize.defaults(),
+                WEBBEES.initialize.pageTransition(),
+                WEBBEES.initialize.goToTop(),
+                WEBBEES.initialize.lazyLoad(),
+                WEBBEES.initialize.lightbox(),
+                WEBBEES.initialize.resizeVideos(),
+                WEBBEES.initialize.dataResponsiveClasses(),
+                WEBBEES.initialize.dataResponsiveHeights(),
+                WEBBEES.initialize.stickFooterOnSmall();
         },
         execFunc: function (e, i) {
             let n = Array.prototype.slice.call(arguments, 2),
@@ -155,9 +155,9 @@ var SEMICOLON = SEMICOLON || {};
                 n.execfn &&
                     (n.trigger && !s
                         ? e(window).on(n.trigger, function () {
-                              SEMICOLON.initialize.execFunc(n.execfn, window, i);
+                              WEBBEES.initialize.execFunc(n.execfn, window, i);
                           })
-                        : SEMICOLON.initialize.execFunc(n.execfn, window, i)),
+                        : WEBBEES.initialize.execFunc(n.execfn, window, i)),
                 n.class && o.addClass(n.class);
         },
         jsLinking: function (i, n) {
@@ -171,13 +171,13 @@ var SEMICOLON = SEMICOLON || {};
                 "undefined" != typeof scwDisableJsAJAX && !0 === scwDisableJsAJAX && (l = !0),
                 (t = /^(f|ht)tps?:\/\//i.test(window.decodeURIComponent(n.file)) ? n.file : a + n.file),
                 s
-                    ? SEMICOLON.initialize.execPlugin(i, n)
+                    ? WEBBEES.initialize.execPlugin(i, n)
                     : l
                     ? console.log(n.error)
                     : e
                           .ajax({ url: t, dataType: "script", cache: !0, crossDomain: !0, timeout: 5e3 })
                           .done(function () {
-                              SEMICOLON.initialize.execPlugin(i, n);
+                              WEBBEES.initialize.execPlugin(i, n);
                           })
                           .fail(function () {
                               console.log(n.error);
@@ -245,7 +245,7 @@ var SEMICOLON = SEMICOLON || {};
                         },
                     },
                 ]),
-                SEMICOLON.initialize.functions({
+                WEBBEES.initialize.functions({
                     default: "body",
                     file: "plugins.easing.js",
                     error: "plugins.easing.js: Plugin could not be loaded",
@@ -253,7 +253,7 @@ var SEMICOLON = SEMICOLON || {};
                     trigger: "pluginEasingReady",
                     class: "has-plugin-easing",
                 }),
-                SEMICOLON.initialize.functions({
+                WEBBEES.initialize.functions({
                     default: "body",
                     file: "plugins.bootstrap.js",
                     error: "plugins.bootstrap.js: Plugin could not be loaded",
@@ -273,7 +273,7 @@ var SEMICOLON = SEMICOLON || {};
                     trigger: "intersectObservePolyfill",
                     class: "has-polyfill-intersection-observer",
                 };
-                SEMICOLON.initialize.functions(e);
+                WEBBEES.initialize.functions(e);
             }
         },
         goToTop: function () {
@@ -297,12 +297,12 @@ var SEMICOLON = SEMICOLON || {};
                 default: "[data-lightbox]",
                 file: "plugins.lightbox.js",
                 error: "plugins.lightbox.js: Plugin could not be loaded",
-                execfn: "SEMICOLON_lightboxInit",
+                execfn: "WEBBEES_lightboxInit",
                 pluginfn: "$().magnificPopup",
                 trigger: "pluginLightboxReady",
                 class: "has-plugin-lightbox",
             };
-            SEMICOLON.initialize.functions(i);
+            WEBBEES.initialize.functions(i);
         },
         modal: function (e) {
             let i = {
@@ -310,30 +310,30 @@ var SEMICOLON = SEMICOLON || {};
                 default: ".modal-on-load",
                 file: "plugins.lightbox.js",
                 error: "plugins.lightbox.js: Plugin could not be loaded",
-                execfn: "SEMICOLON_modalInit",
+                execfn: "WEBBEES_modalInit",
                 pluginfn: "$().magnificPopup",
                 trigger: "pluginLightboxReady",
                 class: "has-plugin-lightbox",
             };
-            SEMICOLON.initialize.functions(i);
+            WEBBEES.initialize.functions(i);
         },
         resizeVideos: function () {
-            SEMICOLON.initialize.functions({
+            WEBBEES.initialize.functions({
                 default: 'iframe[src*="youtube"],iframe[src*="vimeo"],iframe[src*="dailymotion"],iframe[src*="maps.google.com"],iframe[src*="google.com/maps"]',
                 file: "plugins.fitvids.js",
                 error: "plugins.fitvids.js: Plugin could not be loaded",
-                execfn: "SEMICOLON_resizeVideosInit",
+                execfn: "WEBBEES_resizeVideosInit",
                 pluginfn: "$().fitVids",
                 trigger: "pluginfitVidsReady",
                 class: "has-plugin-fitvids",
             });
         },
         pageTransition: function () {
-            SEMICOLON.initialize.functions({
+            WEBBEES.initialize.functions({
                 default: ".page-transition",
                 file: "plugins.pagetransition.js",
                 error: "plugins.pagetransition.js: Plugin could not be loaded",
-                execfn: "SEMICOLON_pageTransitionInit",
+                execfn: "WEBBEES_pageTransitionInit",
                 pluginfn: "$().animsition",
                 trigger: "pluginPageTransitionReady",
                 class: "has-plugin-animsition",
@@ -345,39 +345,39 @@ var SEMICOLON = SEMICOLON || {};
                 default: ".lazy",
                 file: "plugins.lazyload.js",
                 error: "plugins.lazyload.js: Plugin could not be loaded",
-                execfn: "SEMICOLON_lazyLoadInit",
+                execfn: "WEBBEES_lazyLoadInit",
                 pluginfn: 'typeof LazyLoad !== "undefined"',
                 trigger: "pluginlazyLoadReady",
                 class: "has-plugin-lazyload",
             };
-            SEMICOLON.initialize.functions(i);
+            WEBBEES.initialize.functions(i);
         },
         topScrollOffset: function () {
             let e = 0;
             return (
-                (!o.hasClass("device-xl") && !o.hasClass("device-lg")) || SEMICOLON.isMobile.any()
+                (!o.hasClass("device-xl") && !o.hasClass("device-lg")) || WEBBEES.isMobile.any()
                     ? (e = 40)
                     : ((e = d.hasClass("sticky-header") ? ($.hasClass("dots-menu") ? 100 : 144) : $.hasClass("dots-menu") ? 140 : 184), $.length || (e = d.hasClass("sticky-header") ? 100 : 140)),
                 e
             );
         },
         dataResponsiveClasses: function () {
-            SEMICOLON.initialize.functions({
+            WEBBEES.initialize.functions({
                 default: "[data-class-xl],[data-class-lg],[data-class-md],[data-class-sm],[data-class-xs]",
                 file: "plugins.dataclasses.js",
                 error: "plugins.dataclasses.js: Plugin could not be loaded",
-                execfn: "SEMICOLON_dataClassesInit",
+                execfn: "WEBBEES_dataClassesInit",
                 pluginfn: 'typeof scwDataClassesPlugin !== "undefined"',
                 trigger: "pluginDataClassesReady",
                 class: "has-plugin-dataclasses",
             });
         },
         dataResponsiveHeights: function () {
-            SEMICOLON.initialize.functions({
+            WEBBEES.initialize.functions({
                 default: "[data-height-xl],[data-height-lg],[data-height-md],[data-height-sm],[data-height-xs]",
                 file: "plugins.dataheights.js",
                 error: "plugins.dataheights.js: Plugin could not be loaded",
-                execfn: "SEMICOLON_dataHeightsInit",
+                execfn: "WEBBEES_dataHeightsInit",
                 pluginfn: 'typeof scwDataHeightsPlugin !== "undefined"',
                 trigger: "pluginDataHeightsReady",
                 class: "has-plugin-dataheights",
@@ -390,20 +390,20 @@ var SEMICOLON = SEMICOLON || {};
             !o.hasClass("sticky-footer") && M.length > 0 && r.has("#footer") && e > i && M.css({ "margin-top": e - i });
         },
     }),
-        (SEMICOLON.header = {
+        (WEBBEES.header = {
             init: function () {
-                SEMICOLON.header.initialize(),
-                    SEMICOLON.header.menufunctions(),
-                    SEMICOLON.header.fullWidthMenu(),
-                    SEMICOLON.header.stickyMenu(),
-                    SEMICOLON.header.stickyPageMenu(),
-                    SEMICOLON.header.sideHeader(),
-                    SEMICOLON.header.sidePanel(),
-                    SEMICOLON.header.onePageScroll(),
-                    SEMICOLON.header.logo(),
-                    SEMICOLON.header.topsearch(),
-                    SEMICOLON.header.topcart(),
-                    SEMICOLON.header.miscFunctions();
+                WEBBEES.header.initialize(),
+                    WEBBEES.header.menufunctions(),
+                    WEBBEES.header.fullWidthMenu(),
+                    WEBBEES.header.stickyMenu(),
+                    WEBBEES.header.stickyPageMenu(),
+                    WEBBEES.header.sideHeader(),
+                    WEBBEES.header.sidePanel(),
+                    WEBBEES.header.onePageScroll(),
+                    WEBBEES.header.logo(),
+                    WEBBEES.header.topsearch(),
+                    WEBBEES.header.topcart(),
+                    WEBBEES.header.miscFunctions();
             },
             initialize: function () {
                 u.length > 0 && (e(".header-wrap-clone").length < 1 && u.after('<div class="header-wrap-clone"></div>'), (y = e(".header-wrap-clone"))),
@@ -413,7 +413,7 @@ var SEMICOLON = SEMICOLON || {};
                         ".top-links-item:has(.top-links-sub-menu,.top-links-section) > a:not(:has(.icon-angle-down)), .menu-item:not(.mega-menu-title):has(.sub-menu-container) > .menu-link > div:not(:has(.icon-angle-down)), .page-menu-item:has(.page-menu-sub-menu) > a > div:not(:has(.icon-angle-down))"
                     ).append('<i class="icon-angle-down"></i>'),
                     e(".menu-item:not(.mega-menu-title):has(.sub-menu-container):not(:has(.sub-menu-trigger))").append('<button class="sub-menu-trigger icon-chevron-right"></button>'),
-                    SEMICOLON.header.menuInvert();
+                    WEBBEES.header.menuInvert();
             },
             menuInvert: function (i) {
                 let n = i || e(".mega-menu-content, .sub-menu-container, .top-links-section");
@@ -431,7 +431,7 @@ var SEMICOLON = SEMICOLON || {};
             includeOffset: function () {
                 if (c.length < 1) return !0;
                 let e = d.outerHeight();
-                (d.hasClass("floating-header") || c.hasClass("include-topbar")) && (e += d.offset().top), c.css({ "margin-top": -e }), SEMICOLON.slider.sliderParallax();
+                (d.hasClass("floating-header") || c.hasClass("include-topbar")) && (e += d.offset().top), c.css({ "margin-top": -e }), WEBBEES.slider.sliderParallax();
             },
             menufunctions: function () {
                 let i,
@@ -444,7 +444,7 @@ var SEMICOLON = SEMICOLON || {};
                     (i = n.children(".sub-menu-trigger")),
                     o.hasClass("device-xl") || o.hasClass("device-lg")
                         ? (setTimeout(function () {
-                              y.length > 0 && y.css({ height: u.outerHeight() }), SEMICOLON.header.includeOffset();
+                              y.length > 0 && y.css({ height: u.outerHeight() }), WEBBEES.header.includeOffset();
                           }, 1e3),
                           I.find(a).css({ display: "" }))
                         : c.css({ "margin-top": "" }),
@@ -491,7 +491,7 @@ var SEMICOLON = SEMICOLON || {};
                                 e(this).parent("li").children(".top-links-sub-menu,.top-links-section").toggleClass("d-block"),
                                 i.preventDefault();
                         }),
-                    SEMICOLON.header.menuInvert(e(".top-links-section")),
+                    WEBBEES.header.menuInvert(e(".top-links-section")),
                     e("#primary-menu-trigger")
                         .off("click")
                         .on("click", function () {
@@ -532,20 +532,20 @@ var SEMICOLON = SEMICOLON || {};
                         (i > e
                             ? o.hasClass("side-header") ||
                               (d.filter(":not(.no-sticky)").addClass("sticky-header"),
-                              SEMICOLON.header.stickyMenuClass(),
+                              WEBBEES.header.stickyMenuClass(),
                               "true" != v ||
                                   d.hasClass("no-sticky") ||
                                   (i - e > Number(S)
-                                      ? (d.addClass("sticky-header-shrink"), C && (x.find("img").css({ height: Number(f) }), SEMICOLON.header.menuItemsSpacing(O)))
-                                      : (d.removeClass("sticky-header-shrink"), C && (x.find("img").css({ height: Number(g) }), SEMICOLON.header.menuItemsSpacing(h)))))
-                            : (SEMICOLON.header.removeStickyness(), C && (x.find("img").css({ height: Number(g) }), SEMICOLON.header.menuItemsSpacing(h)))),
+                                      ? (d.addClass("sticky-header-shrink"), C && (x.find("img").css({ height: Number(f) }), WEBBEES.header.menuItemsSpacing(O)))
+                                      : (d.removeClass("sticky-header-shrink"), C && (x.find("img").css({ height: Number(g) }), WEBBEES.header.menuItemsSpacing(h)))))
+                            : (WEBBEES.header.removeStickyness(), C && (x.find("img").css({ height: Number(g) }), WEBBEES.header.menuItemsSpacing(h)))),
                     (o.hasClass("device-xs") || o.hasClass("device-sm") || o.hasClass("device-md")) &&
                         ("true" == p
                             ? i > e
-                                ? (d.filter(":not(.no-sticky)").addClass("sticky-header"), SEMICOLON.header.stickyMenuClass())
-                                : (SEMICOLON.header.removeStickyness(), SEMICOLON.header.responsiveMenuClass())
-                            : SEMICOLON.header.removeStickyness(),
-                        C && (x.find("img").css({ height: Number(m) }), SEMICOLON.header.menuItemsSpacing("")));
+                                ? (d.filter(":not(.no-sticky)").addClass("sticky-header"), WEBBEES.header.stickyMenuClass())
+                                : (WEBBEES.header.removeStickyness(), WEBBEES.header.responsiveMenuClass())
+                            : WEBBEES.header.removeStickyness(),
+                        C && (x.find("img").css({ height: Number(m) }), WEBBEES.header.menuItemsSpacing("")));
             },
             menuItemsSpacing: function (e) {
                 let i = b;
@@ -578,8 +578,8 @@ var SEMICOLON = SEMICOLON || {};
                     d.removeClass().addClass(N),
                     u.removeClass().addClass(E),
                     u.hasClass("force-not-dark") || u.removeClass("not-dark"),
-                    SEMICOLON.slider.swiperSliderMenu(),
-                    SEMICOLON.slider.revolutionSliderMenu(),
+                    WEBBEES.slider.swiperSliderMenu(),
+                    WEBBEES.slider.revolutionSliderMenu(),
                     y.length > 0 && u.outerHeight() > y.outerHeight() && y.css({ height: u.outerHeight() })),
                     (o.hasClass("device-sm") || o.hasClass("device-xs") || o.hasClass("device-md")) && void 0 === k && (d.removeClass().addClass(N), u.removeClass().addClass(E), u.hasClass("force-not-dark") || u.removeClass("not-dark"));
             },
@@ -603,12 +603,12 @@ var SEMICOLON = SEMICOLON || {};
                     default: ".one-page-menu",
                     file: "plugins.onepage.js",
                     error: "plugins.onepage.js: Plugin could not be loaded",
-                    execfn: "SEMICOLON_onePageModule",
+                    execfn: "WEBBEES_onePageModule",
                     pluginfn: 'typeof scwOnePageModulePlugin !== "undefined"',
                     trigger: "pluginOnePageModuleReady",
                     class: "has-plugin-onepagemodule",
                 };
-                SEMICOLON.initialize.functions(i);
+                WEBBEES.initialize.functions(i);
             },
             logo: function () {
                 let e = j.find("img"),
@@ -643,7 +643,7 @@ var SEMICOLON = SEMICOLON || {};
                     for (n = 0; n < i; n++)
                         "not-dark" == e[n] ? (d.removeClass("dark"), u.addClass("not-dark")) : "dark" == e[n] ? (u.removeClass("not-dark force-not-dark"), d.hasClass(e[n]) || d.addClass(e[n])) : d.hasClass(e[n]) || d.addClass(e[n]);
                 }
-                SEMICOLON.header.logo();
+                WEBBEES.header.logo();
             },
             topsearch: function () {
                 G.parents(".header-row").addClass("top-search-parent");
@@ -693,9 +693,9 @@ var SEMICOLON = SEMICOLON || {};
                 });
             },
         }),
-        (SEMICOLON.slider = {
+        (WEBBEES.slider = {
             init: function () {
-                SEMICOLON.slider.sliderDimensions(), SEMICOLON.slider.sliderRun(), SEMICOLON.slider.sliderParallax(), SEMICOLON.slider.sliderElementsFade();
+                WEBBEES.slider.sliderDimensions(), WEBBEES.slider.sliderRun(), WEBBEES.slider.sliderParallax(), WEBBEES.slider.sliderElementsFade();
             },
             sliderDimensions: function () {
                 let e = W.outerHeight(),
@@ -723,12 +723,12 @@ var SEMICOLON = SEMICOLON || {};
                     default: ".swiper_wrapper",
                     file: "plugins.swiper.js",
                     error: "plugins.swiper.js: Plugin could not be loaded",
-                    execfn: "SEMICOLON_swiperInit",
+                    execfn: "WEBBEES_swiperInit",
                     pluginfn: 'typeof Swiper !== "undefined"',
                     trigger: "pluginSwiperReady",
                     class: "has-plugin-swiper",
                 };
-                SEMICOLON.initialize.functions(i);
+                WEBBEES.initialize.functions(i);
             },
             sliderParallaxOffset: function () {
                 let e = 0,
@@ -742,33 +742,33 @@ var SEMICOLON = SEMICOLON || {};
                 if (W.length < 1) return !0;
                 let e,
                     i,
-                    n = SEMICOLON.slider.sliderParallaxOffset(),
+                    n = WEBBEES.slider.sliderParallaxOffset(),
                     a = W.outerHeight();
                 (t = window.scrollX),
                     (s = window.scrollY),
-                    (!o.hasClass("device-xl") && !o.hasClass("device-lg")) || SEMICOLON.isMobile.any()
+                    (!o.hasClass("device-xl") && !o.hasClass("device-lg")) || WEBBEES.isMobile.any()
                         ? W.find(".slider-inner").length > 0
-                            ? (SEMICOLON.slider.sliderParallaxSet(0, 0, ie), SEMICOLON.slider.sliderParallaxSet(0, 0, ee))
-                            : (SEMICOLON.slider.sliderParallaxSet(0, 0, Z), SEMICOLON.slider.sliderParallaxSet(0, 0, ee))
+                            ? (WEBBEES.slider.sliderParallaxSet(0, 0, ie), WEBBEES.slider.sliderParallaxSet(0, 0, ee))
+                            : (WEBBEES.slider.sliderParallaxSet(0, 0, Z), WEBBEES.slider.sliderParallaxSet(0, 0, ee))
                         : (a + n + 50 > s
                               ? (W.addClass("slider-parallax-visible").removeClass("slider-parallax-invisible"),
                                 s > n
                                     ? W.find(".slider-inner").length > 0
-                                        ? ((e = -0.4 * (s - n)), (i = -0.15 * (s - n)), SEMICOLON.slider.sliderParallaxSet(0, e, ie), SEMICOLON.slider.sliderParallaxSet(0, i, ee))
-                                        : ((e = (s - n) / 1.5), (i = (s - n) / 7), SEMICOLON.slider.sliderParallaxSet(0, e, Z), SEMICOLON.slider.sliderParallaxSet(0, i, ee))
+                                        ? ((e = -0.4 * (s - n)), (i = -0.15 * (s - n)), WEBBEES.slider.sliderParallaxSet(0, e, ie), WEBBEES.slider.sliderParallaxSet(0, i, ee))
+                                        : ((e = (s - n) / 1.5), (i = (s - n) / 7), WEBBEES.slider.sliderParallaxSet(0, e, Z), WEBBEES.slider.sliderParallaxSet(0, i, ee))
                                     : W.find(".slider-inner").length > 0
-                                    ? (SEMICOLON.slider.sliderParallaxSet(0, 0, ie), SEMICOLON.slider.sliderParallaxSet(0, 0, ee))
-                                    : (SEMICOLON.slider.sliderParallaxSet(0, 0, Z), SEMICOLON.slider.sliderParallaxSet(0, 0, ee)))
+                                    ? (WEBBEES.slider.sliderParallaxSet(0, 0, ie), WEBBEES.slider.sliderParallaxSet(0, 0, ee))
+                                    : (WEBBEES.slider.sliderParallaxSet(0, 0, Z), WEBBEES.slider.sliderParallaxSet(0, 0, ee)))
                               : W.addClass("slider-parallax-invisible").removeClass("slider-parallax-visible"),
                           requestAnimationFrame(function () {
-                              SEMICOLON.slider.sliderParallax(), SEMICOLON.slider.sliderElementsFade();
+                              WEBBEES.slider.sliderParallax(), WEBBEES.slider.sliderElementsFade();
                           }));
             },
             sliderElementsFade: function () {
                 if (W.length < 1) return !0;
-                if ((!o.hasClass("device-xl") && !o.hasClass("device-lg")) || SEMICOLON.isMobile.any()) W.find(".slider-arrow-left,.slider-arrow-right,.slider-caption,.slider-element-fade").css({ opacity: 1 });
+                if ((!o.hasClass("device-xl") && !o.hasClass("device-lg")) || WEBBEES.isMobile.any()) W.find(".slider-arrow-left,.slider-arrow-right,.slider-caption,.slider-element-fade").css({ opacity: 1 });
                 else {
-                    SEMICOLON.slider.sliderParallaxOffset();
+                    WEBBEES.slider.sliderParallaxOffset();
                     let e,
                         i = W.outerHeight();
                     (e = d.hasClass("transparent-header") || o.hasClass("side-header") ? 100 : 0),
@@ -780,13 +780,13 @@ var SEMICOLON = SEMICOLON || {};
             swiperSliderMenu: function (e) {
                 if (((e = void 0 !== e && e), o.hasClass("device-xl") || o.hasClass("device-lg") || (d.hasClass("transparent-header-responsive") && !o.hasClass("primary-menu-open")))) {
                     let i = V.find(".swiper-slide.swiper-slide-active");
-                    SEMICOLON.slider.headerSchemeChanger(i, e);
+                    WEBBEES.slider.headerSchemeChanger(i, e);
                 }
             },
             revolutionSliderMenu: function (e) {
                 if (((e = void 0 !== e && e), o.hasClass("device-xl") || o.hasClass("device-lg") || (d.hasClass("transparent-header-responsive") && !o.hasClass("primary-menu-open")))) {
                     let i = V.find(".active-revslide");
-                    SEMICOLON.slider.headerSchemeChanger(i, e);
+                    WEBBEES.slider.headerSchemeChanger(i, e);
                 }
             },
             headerSchemeChanger: function (i, n) {
@@ -812,13 +812,13 @@ var SEMICOLON = SEMICOLON || {};
                               e("#header.transparent-header:not(.semi-transparent,.floating-header)").removeClass("dark"),
                               e("#header.transparent-header:not(.sticky-header,.semi-transparent,.floating-header)").find("#header-wrap").addClass("not-dark"))
                             : (e("#header.transparent-header:not(.semi-transparent,.floating-header)").removeClass("dark"), u.removeClass("not-dark"));
-                    d.hasClass("sticky-header") && SEMICOLON.header.stickyMenuClass(), SEMICOLON.header.logo();
+                    d.hasClass("sticky-header") && WEBBEES.header.stickyMenuClass(), WEBBEES.header.logo();
                 }
             },
         }),
-        (SEMICOLON.portfolio = {
+        (WEBBEES.portfolio = {
             init: function () {
-                SEMICOLON.portfolio.revealDesc(), SEMICOLON.portfolio.ajaxload();
+                WEBBEES.portfolio.revealDesc(), WEBBEES.portfolio.ajaxload();
             },
             revealDesc: function () {
                 let i = e(".portfolio-reveal");
@@ -834,47 +834,47 @@ var SEMICOLON = SEMICOLON || {};
                 });
             },
             ajaxload: function () {
-                SEMICOLON.initialize.functions({
+                WEBBEES.initialize.functions({
                     default: ".portfolio-ajax",
                     file: "plugins.ajaxportfolio.js",
                     error: "plugins.ajaxportfolio.js: Plugin could not be loaded",
-                    execfn: "SEMICOLON_portfolioAjaxloadInit",
+                    execfn: "WEBBEES_portfolioAjaxloadInit",
                     pluginfn: 'typeof scwAjaxPortfolioPlugin !== "undefined"',
                     trigger: "pluginAjaxPortfolioReady",
                     class: "has-plugin-ajaxportfolio",
                 });
             },
         }),
-        (SEMICOLON.widget = {
+        (WEBBEES.widget = {
             init: function () {
-                SEMICOLON.widget.animations(),
-                    SEMICOLON.widget.hoverAnimation(),
-                    SEMICOLON.widget.youtubeBgVideo(),
-                    SEMICOLON.widget.tabs(),
-                    SEMICOLON.widget.toggles(),
-                    SEMICOLON.widget.accordions(),
-                    SEMICOLON.widget.counter(),
-                    SEMICOLON.widget.countdown(),
-                    SEMICOLON.widget.gmap(),
-                    SEMICOLON.widget.roundedSkill(),
-                    SEMICOLON.widget.progress(),
-                    SEMICOLON.widget.twitterFeed(),
-                    SEMICOLON.widget.flickrFeed(),
-                    SEMICOLON.widget.instagramPhotos(),
-                    SEMICOLON.widget.dribbbleShots(),
-                    SEMICOLON.widget.navTree(),
-                    SEMICOLON.widget.textRotator(),
-                    SEMICOLON.widget.carousel(),
-                    SEMICOLON.widget.linkScroll(),
-                    SEMICOLON.widget.ajaxForm(),
-                    SEMICOLON.widget.subscription(),
-                    SEMICOLON.widget.shapeDivider(),
-                    SEMICOLON.widget.stickySidebar(),
-                    SEMICOLON.widget.cookieNotify(),
-                    SEMICOLON.widget.cartQuantity(),
-                    SEMICOLON.widget.readmore(),
-                    SEMICOLON.widget.pricingSwitcher(),
-                    SEMICOLON.widget.extras();
+                WEBBEES.widget.animations(),
+                    WEBBEES.widget.hoverAnimation(),
+                    WEBBEES.widget.youtubeBgVideo(),
+                    WEBBEES.widget.tabs(),
+                    WEBBEES.widget.toggles(),
+                    WEBBEES.widget.accordions(),
+                    WEBBEES.widget.counter(),
+                    WEBBEES.widget.countdown(),
+                    WEBBEES.widget.gmap(),
+                    WEBBEES.widget.roundedSkill(),
+                    WEBBEES.widget.progress(),
+                    WEBBEES.widget.twitterFeed(),
+                    WEBBEES.widget.flickrFeed(),
+                    WEBBEES.widget.instagramPhotos(),
+                    WEBBEES.widget.dribbbleShots(),
+                    WEBBEES.widget.navTree(),
+                    WEBBEES.widget.textRotator(),
+                    WEBBEES.widget.carousel(),
+                    WEBBEES.widget.linkScroll(),
+                    WEBBEES.widget.ajaxForm(),
+                    WEBBEES.widget.subscription(),
+                    WEBBEES.widget.shapeDivider(),
+                    WEBBEES.widget.stickySidebar(),
+                    WEBBEES.widget.cookieNotify(),
+                    WEBBEES.widget.cartQuantity(),
+                    WEBBEES.widget.readmore(),
+                    WEBBEES.widget.pricingSwitcher(),
+                    WEBBEES.widget.extras();
             },
             parallax: function (e) {
                 let i = {
@@ -882,12 +882,12 @@ var SEMICOLON = SEMICOLON || {};
                     default: ".parallax,.page-title-parallax,.portfolio-parallax .portfolio-image",
                     file: "plugins.parallax.js",
                     error: "plugins.parallax.js: Plugin could not be loaded",
-                    execfn: "SEMICOLON_parallaxInit",
+                    execfn: "WEBBEES_parallaxInit",
                     pluginfn: 'typeof skrollr !== "undefined"',
                     trigger: "pluginParallaxReady",
                     class: "has-plugin-parallax",
                 };
-                SEMICOLON.initialize.functions(i);
+                WEBBEES.initialize.functions(i);
             },
             animations: function (e) {
                 let i = {
@@ -895,12 +895,12 @@ var SEMICOLON = SEMICOLON || {};
                     default: "[data-animate]",
                     file: "plugins.animations.js",
                     error: "plugins.animations.js: Plugin could not be loaded",
-                    execfn: "SEMICOLON_animationsInit",
+                    execfn: "WEBBEES_animationsInit",
                     pluginfn: 'typeof scwAnimationsPlugin !== "undefined"',
                     trigger: "pluginAnimationsReady",
                     class: "has-plugin-animations",
                 };
-                SEMICOLON.initialize.functions(i);
+                WEBBEES.initialize.functions(i);
             },
             hoverAnimation: function (e) {
                 let i = {
@@ -908,12 +908,12 @@ var SEMICOLON = SEMICOLON || {};
                     default: "[data-hover-animate]",
                     file: "plugins.hoveranimation.js",
                     error: "plugins.hoveranimation.js: Plugin could not be loaded",
-                    execfn: "SEMICOLON_hoverAnimationInit",
+                    execfn: "WEBBEES_hoverAnimationInit",
                     pluginfn: 'typeof scwHoverAnimationPlugin !== "undefined"',
                     trigger: "pluginHoverAnimationReady",
                     class: "has-plugin-hoveranimation",
                 };
-                SEMICOLON.initialize.functions(i);
+                WEBBEES.initialize.functions(i);
             },
             gridInit: function (e) {
                 let i = {
@@ -921,12 +921,12 @@ var SEMICOLON = SEMICOLON || {};
                     default: ".grid-container",
                     file: "plugins.isotope.js",
                     error: "plugins.isotope.js: Plugin could not be loaded",
-                    execfn: "SEMICOLON_gridContainerInit",
+                    execfn: "WEBBEES_gridContainerInit",
                     pluginfn: "$().isotope",
                     trigger: "pluginIsotopeReady",
                     class: "has-plugin-isotope",
                 };
-                SEMICOLON.initialize.functions(i);
+                WEBBEES.initialize.functions(i);
             },
             filterInit: function (e) {
                 let i = {
@@ -934,12 +934,12 @@ var SEMICOLON = SEMICOLON || {};
                     default: ".grid-filter,.custom-filter",
                     file: "plugins.gridfilter.js",
                     error: "plugins.gridfilter.js: Plugin could not be loaded",
-                    execfn: "SEMICOLON_gridFilterInit",
+                    execfn: "WEBBEES_gridFilterInit",
                     pluginfn: '$().isotope && typeof scwGridFilterPlugin !== "undefined"',
                     trigger: "pluginGridFilterReady",
                     class: "has-plugin-isotope-filter",
                 };
-                SEMICOLON.initialize.functions(i);
+                WEBBEES.initialize.functions(i);
             },
             loadFlexSlider: function (e) {
                 let i = {
@@ -947,12 +947,12 @@ var SEMICOLON = SEMICOLON || {};
                     default: ".fslider",
                     file: "plugins.flexslider.js",
                     error: "plugins.flexslider.js: Plugin could not be loaded",
-                    execfn: "SEMICOLON_flexSliderInit",
+                    execfn: "WEBBEES_flexSliderInit",
                     pluginfn: "$().flexslider",
                     trigger: "pluginFlexSliderReady",
                     class: "has-plugin-flexslider",
                 };
-                SEMICOLON.initialize.functions(i);
+                WEBBEES.initialize.functions(i);
             },
             html5Video: function (e) {
                 let i = {
@@ -960,12 +960,12 @@ var SEMICOLON = SEMICOLON || {};
                     default: ".video-wrap:has(video)",
                     file: "plugins.html5video.js",
                     error: "plugins.html5video.js: Plugin could not be loaded",
-                    execfn: "SEMICOLON_html5VideoInit",
+                    execfn: "WEBBEES_html5VideoInit",
                     pluginfn: 'typeof scwHtml5VideoPlugin !== "undefined"',
                     trigger: "pluginHtml5VideoReady",
                     class: "has-plugin-html5video",
                 };
-                SEMICOLON.initialize.functions(i);
+                WEBBEES.initialize.functions(i);
             },
             youtubeBgVideo: function (e) {
                 let i = {
@@ -973,12 +973,12 @@ var SEMICOLON = SEMICOLON || {};
                     default: ".yt-bg-player",
                     file: "plugins.youtube.js",
                     error: "plugins.youtube.js: Plugin could not be loaded",
-                    execfn: "SEMICOLON_youtubeBgVideoInit",
+                    execfn: "WEBBEES_youtubeBgVideoInit",
                     pluginfn: "$().YTPlayer",
                     trigger: "pluginYoutubeBgVideoReady",
                     class: "has-plugin-youtubebg",
                 };
-                SEMICOLON.initialize.functions(i);
+                WEBBEES.initialize.functions(i);
             },
             tabs: function (e) {
                 let i = {
@@ -986,12 +986,12 @@ var SEMICOLON = SEMICOLON || {};
                     default: '.tabs,[data-plugin="tabs"]',
                     file: "plugins.tabs.js",
                     error: "plugins.tabs.js: Plugin could not be loaded",
-                    execfn: "SEMICOLON_tabsInit",
+                    execfn: "WEBBEES_tabsInit",
                     pluginfn: "$().tabs",
                     trigger: "pluginTabsReady",
                     class: "has-plugin-tabs",
                 };
-                SEMICOLON.initialize.functions(i);
+                WEBBEES.initialize.functions(i);
             },
             toggles: function (e) {
                 let i = {
@@ -999,12 +999,12 @@ var SEMICOLON = SEMICOLON || {};
                     default: ".toggle",
                     file: "plugins.toggles.js",
                     error: "plugins.toggles.js: Plugin could not be loaded",
-                    execfn: "SEMICOLON_togglesInit",
+                    execfn: "WEBBEES_togglesInit",
                     pluginfn: 'typeof scwTogglesPlugin !== "undefined"',
                     trigger: "pluginTogglesReady",
                     class: "has-plugin-toggles",
                 };
-                SEMICOLON.initialize.functions(i);
+                WEBBEES.initialize.functions(i);
             },
             accordions: function (e) {
                 let i = {
@@ -1012,12 +1012,12 @@ var SEMICOLON = SEMICOLON || {};
                     default: ".accordion",
                     file: "plugins.accordions.js",
                     error: "plugins.accordions.js: Plugin could not be loaded",
-                    execfn: "SEMICOLON_accordionsInit",
+                    execfn: "WEBBEES_accordionsInit",
                     pluginfn: 'typeof scwAccordionsPlugin !== "undefined"',
                     trigger: "pluginAccordionsReady",
                     class: "has-plugin-accordions",
                 };
-                SEMICOLON.initialize.functions(i);
+                WEBBEES.initialize.functions(i);
             },
             counter: function (e) {
                 let i = {
@@ -1025,12 +1025,12 @@ var SEMICOLON = SEMICOLON || {};
                     default: ".counter",
                     file: "plugins.counter.js",
                     error: "plugins.counter.js: Plugin could not be loaded",
-                    execfn: "SEMICOLON_counterInit",
+                    execfn: "WEBBEES_counterInit",
                     pluginfn: "$().countTo",
                     trigger: "pluginCounterReady",
                     class: "has-plugin-counter",
                 };
-                SEMICOLON.initialize.functions(i);
+                WEBBEES.initialize.functions(i);
             },
             countdown: function (e) {
                 let i = {
@@ -1048,12 +1048,12 @@ var SEMICOLON = SEMICOLON || {};
                         default: ".countdown",
                         file: "plugins.countdown.js",
                         error: "plugins.countdown.js: Plugin could not be loaded",
-                        execfn: "SEMICOLON_countdownInit",
+                        execfn: "WEBBEES_countdownInit",
                         pluginfn: "$().countdown",
                         trigger: "pluginCountdownReady",
                         class: "has-plugin-countdown",
                     };
-                SEMICOLON.initialize.functions(i), SEMICOLON.initialize.functions(n);
+                WEBBEES.initialize.functions(i), WEBBEES.initialize.functions(n);
             },
             gmap: function (e) {
                 let i = {
@@ -1071,13 +1071,13 @@ var SEMICOLON = SEMICOLON || {};
                         default: ".gmap",
                         file: "plugins.gmap.js",
                         error: "plugins.gmap.js: Plugin could not be loaded",
-                        execfn: "SEMICOLON_gmapInit",
+                        execfn: "WEBBEES_gmapInit",
                         pluginfn: 'typeof google !== "undefined" && $().gMap',
                         hiddendisable: !0,
                         trigger: "pluginGmapReady",
                         class: "has-plugin-gmap",
                     };
-                SEMICOLON.initialize.functions(i), SEMICOLON.initialize.functions(n);
+                WEBBEES.initialize.functions(i), WEBBEES.initialize.functions(n);
             },
             roundedSkill: function (e) {
                 let i = {
@@ -1085,12 +1085,12 @@ var SEMICOLON = SEMICOLON || {};
                     default: ".rounded-skill",
                     file: "plugins.piechart.js",
                     error: "plugins.piechart.js: Plugin could not be loaded",
-                    execfn: "SEMICOLON_roundedSkillInit",
+                    execfn: "WEBBEES_roundedSkillInit",
                     pluginfn: "$().easyPieChart",
                     trigger: "pluginRoundedSkillReady",
                     class: "has-plugin-piechart",
                 };
-                SEMICOLON.initialize.functions(i);
+                WEBBEES.initialize.functions(i);
             },
             progress: function (e) {
                 let i = {
@@ -1098,12 +1098,12 @@ var SEMICOLON = SEMICOLON || {};
                     default: ".progress",
                     file: "plugins.progress.js",
                     error: "plugins.progress.js: Plugin could not be loaded",
-                    execfn: "SEMICOLON_progressInit",
+                    execfn: "WEBBEES_progressInit",
                     pluginfn: 'typeof scwProgressPlugin !== "undefined"',
                     trigger: "pluginProgressReady",
                     class: "has-plugin-progress",
                 };
-                SEMICOLON.initialize.functions(i);
+                WEBBEES.initialize.functions(i);
             },
             twitterFeed: function (e) {
                 let i = {
@@ -1111,12 +1111,12 @@ var SEMICOLON = SEMICOLON || {};
                     default: ".twitter-feed",
                     file: "plugins.twitter.js",
                     error: "plugins.twitter.js: Plugin could not be loaded",
-                    execfn: "SEMICOLON_twitterFeedInit",
+                    execfn: "WEBBEES_twitterFeedInit",
                     pluginfn: 'typeof sm_format_twitter !== "undefined" && typeof sm_format_twitter3 !== "undefined"',
                     trigger: "pluginTwitterFeedReady",
                     class: "has-plugin-twitter",
                 };
-                SEMICOLON.initialize.functions(i);
+                WEBBEES.initialize.functions(i);
             },
             flickrFeed: function (e) {
                 let i = {
@@ -1124,12 +1124,12 @@ var SEMICOLON = SEMICOLON || {};
                     default: ".flickr-feed",
                     file: "plugins.flickrfeed.js",
                     error: "plugins.flickrfeed.js: Plugin could not be loaded",
-                    execfn: "SEMICOLON_flickrFeedInit",
+                    execfn: "WEBBEES_flickrFeedInit",
                     pluginfn: "$().jflickrfeed",
                     trigger: "pluginFlickrFeedReady",
                     class: "has-plugin-flickr",
                 };
-                SEMICOLON.initialize.functions(i);
+                WEBBEES.initialize.functions(i);
             },
             instagramPhotos: function (e) {
                 let i = {
@@ -1137,12 +1137,12 @@ var SEMICOLON = SEMICOLON || {};
                     default: ".instagram-photos",
                     file: "plugins.instagram.js",
                     error: "plugins.instagram.js: Plugin could not be loaded",
-                    execfn: "SEMICOLON_instagramPhotosInit",
+                    execfn: "WEBBEES_instagramPhotosInit",
                     pluginfn: 'typeof scwInstagramPlugin !== "undefined"',
                     trigger: "pluginInstagramReady",
                     class: "has-plugin-instagram",
                 };
-                SEMICOLON.initialize.functions(i);
+                WEBBEES.initialize.functions(i);
             },
             dribbbleShots: function (e) {
                 let i = {
@@ -1150,7 +1150,7 @@ var SEMICOLON = SEMICOLON || {};
                         default: ".dribbble-shots",
                         file: "plugins.dribbble.js",
                         error: "plugins.dribbble.js: Plugin could not be loaded",
-                        execfn: "SEMICOLON_dribbbleShotsInit",
+                        execfn: "WEBBEES_dribbbleShotsInit",
                         pluginfn: "$.jribbble",
                         trigger: "pluginDribbbleReady",
                         class: "has-plugin-dribbble",
@@ -1164,7 +1164,7 @@ var SEMICOLON = SEMICOLON || {};
                         trigger: "pluginImagesLoadedReady",
                         class: "has-plugin-imagesloaded",
                     };
-                SEMICOLON.initialize.functions(i), SEMICOLON.initialize.functions(n);
+                WEBBEES.initialize.functions(i), WEBBEES.initialize.functions(n);
             },
             navTree: function (e) {
                 let i = {
@@ -1172,12 +1172,12 @@ var SEMICOLON = SEMICOLON || {};
                     default: ".nav-tree",
                     file: "plugins.navtree.js",
                     error: "plugins.navtree.js: Plugin could not be loaded",
-                    execfn: "SEMICOLON_navtreeInit",
+                    execfn: "WEBBEES_navtreeInit",
                     pluginfn: 'typeof scwNavTreePlugin !== "undefined"',
                     trigger: "pluginNavTreeReady",
                     class: "has-plugin-navtree",
                 };
-                SEMICOLON.initialize.functions(i);
+                WEBBEES.initialize.functions(i);
             },
             carousel: function (e) {
                 let i = {
@@ -1185,12 +1185,12 @@ var SEMICOLON = SEMICOLON || {};
                     default: ".carousel-widget",
                     file: "plugins.carousel.js",
                     error: "plugins.carousel.js: Plugin could not be loaded",
-                    execfn: "SEMICOLON_carouselInit",
+                    execfn: "WEBBEES_carouselInit",
                     pluginfn: "$().owlCarousel",
                     trigger: "pluginCarouselReady",
                     class: "has-plugin-carousel",
                 };
-                SEMICOLON.initialize.functions(i);
+                WEBBEES.initialize.functions(i);
             },
             masonryThumbs: function (e) {
                 let i = {
@@ -1198,12 +1198,12 @@ var SEMICOLON = SEMICOLON || {};
                     default: ".masonry-thumbs",
                     file: "plugins.masonrythumbs.js",
                     error: "plugins.masonrythumbs.js: Plugin could not be loaded",
-                    execfn: "SEMICOLON_masonryThumbsInit",
+                    execfn: "WEBBEES_masonryThumbsInit",
                     pluginfn: '$().isotope && typeof scwMasonryThumbsPlugin !== "undefined"',
                     trigger: "pluginMasonryThumbsReady",
                     class: "has-plugin-masonrythumbs",
                 };
-                SEMICOLON.initialize.functions(i);
+                WEBBEES.initialize.functions(i);
             },
             notifications: function (e) {
                 let i = {
@@ -1211,12 +1211,12 @@ var SEMICOLON = SEMICOLON || {};
                     default: !1,
                     file: "plugins.notify.js",
                     error: "plugins.notify.js: Plugin could not be loaded",
-                    execfn: "SEMICOLON_notificationInit",
+                    execfn: "WEBBEES_notificationInit",
                     pluginfn: 'typeof toastr !== "undefined"',
                     trigger: "pluginNotifyReady",
                     class: "has-plugin-toastr",
                 };
-                SEMICOLON.initialize.functions(i);
+                WEBBEES.initialize.functions(i);
             },
             textRotator: function (e) {
                 let i = {
@@ -1224,12 +1224,12 @@ var SEMICOLON = SEMICOLON || {};
                     default: ".text-rotater",
                     file: "plugins.textrotator.js",
                     error: "plugins.textrotator.js: Plugin could not be loaded",
-                    execfn: "SEMICOLON_textRotatorInit",
+                    execfn: "WEBBEES_textRotatorInit",
                     pluginfn: "$().Morphext",
                     trigger: "pluginTextRotatorReady",
                     class: "has-plugin-textrotator",
                 };
-                SEMICOLON.initialize.functions(i);
+                WEBBEES.initialize.functions(i);
             },
             linkScroll: function (e) {
                 let i = {
@@ -1237,12 +1237,12 @@ var SEMICOLON = SEMICOLON || {};
                     default: "a[data-scrollto]",
                     file: "plugins.linkscroll.js",
                     error: "plugins.linkscroll.js: Plugin could not be loaded",
-                    execfn: "SEMICOLON_linkScrollInit",
+                    execfn: "WEBBEES_linkScrollInit",
                     pluginfn: 'typeof scwLinkScrollPlugin !== "undefined"',
                     trigger: "pluginLinkScrollReady",
                     class: "has-plugin-linkscroll",
                 };
-                SEMICOLON.initialize.functions(i);
+                WEBBEES.initialize.functions(i);
             },
             ajaxForm: function (e) {
                 let i = { element: e, default: ".form-widget", file: "plugins.form.js", error: "plugins.form.js: Plugin could not be loaded", execfn: !1, pluginfn: "$().validate && $().ajaxSubmit", class: "has-plugin-form" },
@@ -1251,12 +1251,12 @@ var SEMICOLON = SEMICOLON || {};
                         default: ".form-widget",
                         file: "plugins.ajaxform.js",
                         error: "plugins.ajaxform.js: Plugin could not be loaded",
-                        execfn: "SEMICOLON_ajaxFormInit",
+                        execfn: "WEBBEES_ajaxFormInit",
                         pluginfn: 'typeof scwAjaxFormPlugin !== "undefined"',
                         trigger: "pluginAjaxFormReady",
                         class: "has-plugin-ajaxform",
                     };
-                SEMICOLON.initialize.functions(i), SEMICOLON.initialize.functions(n);
+                WEBBEES.initialize.functions(i), WEBBEES.initialize.functions(n);
             },
             subscription: function (e) {
                 let i = { element: e, default: ".subscribe-widget", file: "plugins.form.js", error: "plugins.form.js: Plugin could not be loaded", execfn: !1, pluginfn: "$().validate && $().ajaxSubmit", class: "has-plugin-form" },
@@ -1265,12 +1265,12 @@ var SEMICOLON = SEMICOLON || {};
                         default: ".subscribe-widget",
                         file: "plugins.subscribe.js",
                         error: "plugins.subscribe.js: Plugin could not be loaded",
-                        execfn: "SEMICOLON_subscribeFormInit",
+                        execfn: "WEBBEES_subscribeFormInit",
                         pluginfn: 'typeof scwSubscribeFormPlugin !== "undefined"',
                         trigger: "pluginSubscribeFormReady",
                         class: "has-plugin-subscribeform",
                     };
-                SEMICOLON.initialize.functions(i), SEMICOLON.initialize.functions(n);
+                WEBBEES.initialize.functions(i), WEBBEES.initialize.functions(n);
             },
             shapeDivider: function (e) {
                 let i = {
@@ -1278,12 +1278,12 @@ var SEMICOLON = SEMICOLON || {};
                     default: ".shape-divider",
                     file: "plugins.shapedivider.js",
                     error: "plugins.shapedivider.js: Plugin could not be loaded",
-                    execfn: "SEMICOLON_shapeDividerInit",
+                    execfn: "WEBBEES_shapeDividerInit",
                     pluginfn: 'typeof scwShapeDividerPlugin !== "undefined"',
                     trigger: "pluginShapeDividerReady",
                     class: "has-plugin-shapedivider",
                 };
-                SEMICOLON.initialize.functions(i);
+                WEBBEES.initialize.functions(i);
             },
             ticker: function (e) {
                 let i = {
@@ -1291,12 +1291,12 @@ var SEMICOLON = SEMICOLON || {};
                     default: ".scw-ticker",
                     file: "plugins.ticker.js",
                     error: "plugins.ticker.js: Plugin could not be loaded",
-                    execfn: "SEMICOLON_tickerInit",
+                    execfn: "WEBBEES_tickerInit",
                     pluginfn: 'typeof scwTickerPlugin !== "undefined"',
                     trigger: "pluginTickerReady",
                     class: "has-plugin-ticker",
                 };
-                SEMICOLON.initialize.functions(i);
+                WEBBEES.initialize.functions(i);
             },
             stickySidebar: function (e) {
                 let i = {
@@ -1304,12 +1304,12 @@ var SEMICOLON = SEMICOLON || {};
                     default: ".sticky-sidebar-wrap",
                     file: "plugins.stickysidebar.js",
                     error: "plugins.stickysidebar.js: Plugin could not be loaded",
-                    execfn: "SEMICOLON_stickySidebarInit",
+                    execfn: "WEBBEES_stickySidebarInit",
                     pluginfn: "$().scwStickySidebar",
                     trigger: "pluginStickySidebarReady",
                     class: "has-plugin-stickysidebar",
                 };
-                SEMICOLON.initialize.functions(i);
+                WEBBEES.initialize.functions(i);
             },
             cookieNotify: function (e) {
                 let i = {
@@ -1317,41 +1317,41 @@ var SEMICOLON = SEMICOLON || {};
                     default: ".gdpr-settings,[data-cookies]",
                     file: "plugins.cookie.js",
                     error: "plugins.cookie.js: Plugin could not be loaded",
-                    execfn: "SEMICOLON_cookieInit",
+                    execfn: "WEBBEES_cookieInit",
                     pluginfn: 'typeof Cookies !== "undefined"',
                     trigger: "pluginCookieReady",
                     class: "has-plugin-cookie",
                 };
-                SEMICOLON.initialize.functions(i);
+                WEBBEES.initialize.functions(i);
             },
             cartQuantity: function () {
-                SEMICOLON.initialize.functions({
+                WEBBEES.initialize.functions({
                     default: ".qty",
                     file: "plugins.quantity.js",
                     error: "plugins.quantity.js: Plugin could not be loaded",
-                    execfn: "SEMICOLON_quantityInit",
+                    execfn: "WEBBEES_quantityInit",
                     pluginfn: 'typeof scwQuantityPlugin !== "undefined"',
                     trigger: "pluginQuantityReady",
                     class: "has-plugin-quantity",
                 });
             },
             readmore: function () {
-                SEMICOLON.initialize.functions({
+                WEBBEES.initialize.functions({
                     default: "[data-readmore]",
                     file: "plugins.readmore.js",
                     error: "plugins.readmore.js: Plugin could not be loaded",
-                    execfn: "SEMICOLON_readmoreInit",
+                    execfn: "WEBBEES_readmoreInit",
                     pluginfn: 'typeof scwReadMorePlugin !== "undefined"',
                     trigger: "pluginReadMoreReady",
                     class: "has-plugin-readmore",
                 });
             },
             pricingSwitcher: function () {
-                SEMICOLON.initialize.functions({
+                WEBBEES.initialize.functions({
                     default: ".pts-switcher",
                     file: "plugins.pricingswitcher.js",
                     error: "plugins.pricingswitcher.js: Plugin could not be loaded",
-                    execfn: "SEMICOLON_pricingSwitcherInit",
+                    execfn: "WEBBEES_pricingSwitcherInit",
                     pluginfn: 'typeof scwPricingSwitcherPlugin !== "undefined"',
                     trigger: "pluginPricingSwitcherReady",
                     class: "has-plugin-pricing-switcher",
@@ -1375,10 +1375,10 @@ var SEMICOLON = SEMICOLON || {};
                         .on("click", function (e) {
                             o.toggleClass("top-search-open", !1), Y.toggleClass("top-cart-open", !1);
                         }),
-                    SEMICOLON.isMobile.any() && o.addClass("device-touch");
+                    WEBBEES.isMobile.any() && o.addClass("device-touch");
             },
         }),
-        (SEMICOLON.isMobile = {
+        (WEBBEES.isMobile = {
             Android: function () {
                 return navigator.userAgent.match(/Android/i);
             },
@@ -1395,34 +1395,34 @@ var SEMICOLON = SEMICOLON || {};
                 return navigator.userAgent.match(/IEMobile/i);
             },
             any: function () {
-                return SEMICOLON.isMobile.Android() || SEMICOLON.isMobile.BlackBerry() || SEMICOLON.isMobile.iOS() || SEMICOLON.isMobile.Opera() || SEMICOLON.isMobile.Windows();
+                return WEBBEES.isMobile.Android() || WEBBEES.isMobile.BlackBerry() || WEBBEES.isMobile.iOS() || WEBBEES.isMobile.Opera() || WEBBEES.isMobile.Windows();
             },
         }),
-        (SEMICOLON.customization = { onReady: function () {}, onLoad: function () {}, onResize: function () {} }),
-        (SEMICOLON.documentOnResize = {
+        (WEBBEES.customization = { onReady: function () {}, onLoad: function () {}, onResize: function () {} }),
+        (WEBBEES.documentOnResize = {
             init: function () {
-                SEMICOLON.header.menufunctions(),
-                    SEMICOLON.header.fullWidthMenu(),
-                    SEMICOLON.header.stickyMenu(),
-                    SEMICOLON.initialize.dataResponsiveHeights(),
-                    SEMICOLON.initialize.stickFooterOnSmall(),
-                    SEMICOLON.slider.sliderDimensions(),
-                    SEMICOLON.widget.html5Video(),
-                    SEMICOLON.widget.masonryThumbs(),
-                    SEMICOLON.initialize.dataResponsiveClasses(),
-                    SEMICOLON.customization.onResize(),
+                WEBBEES.header.menufunctions(),
+                    WEBBEES.header.fullWidthMenu(),
+                    WEBBEES.header.stickyMenu(),
+                    WEBBEES.initialize.dataResponsiveHeights(),
+                    WEBBEES.initialize.stickFooterOnSmall(),
+                    WEBBEES.slider.sliderDimensions(),
+                    WEBBEES.widget.html5Video(),
+                    WEBBEES.widget.masonryThumbs(),
+                    WEBBEES.initialize.dataResponsiveClasses(),
+                    WEBBEES.customization.onResize(),
                     (L = l.width());
             },
         }),
-        (SEMICOLON.documentOnReady = {
+        (WEBBEES.documentOnReady = {
             init: function () {
-                SEMICOLON.initialize.init(),
-                    SEMICOLON.header.init(),
-                    (V.length > 0 || U.length > 0) && SEMICOLON.slider.init(),
-                    B.length > 0 && SEMICOLON.portfolio.init(),
-                    SEMICOLON.widget.init(),
-                    SEMICOLON.documentOnReady.windowscroll(),
-                    SEMICOLON.customization.onReady(),
+                WEBBEES.initialize.init(),
+                    WEBBEES.header.init(),
+                    (V.length > 0 || U.length > 0) && WEBBEES.slider.init(),
+                    B.length > 0 && WEBBEES.portfolio.init(),
+                    WEBBEES.widget.init(),
+                    WEBBEES.documentOnReady.windowscroll(),
+                    WEBBEES.customization.onReady(),
                     o.hasClass("adaptive-color-scheme") &&
                         (window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches && o.toggleClass("dark", !0),
                         window.matchMedia &&
@@ -1463,15 +1463,15 @@ var SEMICOLON = SEMICOLON || {};
                               a.appendChild(document.createTextNode(n)))
                             : (se = $.offset().top);
                     }, 1e3)),
-                    SEMICOLON.header.stickyMenu(te),
-                    SEMICOLON.header.stickyPageMenu(se),
+                    WEBBEES.header.stickyMenu(te),
+                    WEBBEES.header.stickyPageMenu(se),
                     window.addEventListener("scroll", function () {
-                        SEMICOLON.initialize.goToTopScroll(), e("body.open-header.close-header-on-scroll").removeClass("side-header-open"), SEMICOLON.header.stickyMenu(te), SEMICOLON.header.stickyPageMenu(se), SEMICOLON.header.logo();
+                        WEBBEES.initialize.goToTopScroll(), e("body.open-header.close-header-on-scroll").removeClass("side-header-open"), WEBBEES.header.stickyMenu(te), WEBBEES.header.stickyPageMenu(se), WEBBEES.header.logo();
                     }),
                     window.addEventListener("DOMContentLoaded", onScrollSliderParallax, !1),
                     l.scrollEnd(function () {
                         let e = u.outerHeight();
-                        y.length > 0 && e > y.outerHeight() && (y.css({ height: e }), (o.hasClass("device-xl") || o.hasClass("device-lg")) && SEMICOLON.header.includeOffset()),
+                        y.length > 0 && e > y.outerHeight() && (y.css({ height: e }), (o.hasClass("device-xl") || o.hasClass("device-lg")) && WEBBEES.header.includeOffset()),
                             $.length > 0 &&
                                 d.length > 0 &&
                                 !d.hasClass("no-sticky") &&
@@ -1486,22 +1486,22 @@ var SEMICOLON = SEMICOLON || {};
                     });
             },
         }),
-        (SEMICOLON.documentOnLoad = {
+        (WEBBEES.documentOnLoad = {
             init: function () {
-                SEMICOLON.slider.swiperSliderMenu(!0),
-                    SEMICOLON.slider.revolutionSliderMenu(!0),
-                    SEMICOLON.initialize.stickFooterOnSmall(),
-                    SEMICOLON.widget.gridInit(),
+                WEBBEES.slider.swiperSliderMenu(!0),
+                    WEBBEES.slider.revolutionSliderMenu(!0),
+                    WEBBEES.initialize.stickFooterOnSmall(),
+                    WEBBEES.widget.gridInit(),
                     l.on("pluginIsotopeReady", function () {
-                        SEMICOLON.widget.filterInit(), SEMICOLON.widget.masonryThumbs();
+                        WEBBEES.widget.filterInit(), WEBBEES.widget.masonryThumbs();
                     }),
-                    SEMICOLON.widget.parallax(),
-                    SEMICOLON.widget.loadFlexSlider(),
-                    SEMICOLON.widget.html5Video(),
-                    SEMICOLON.widget.ticker(),
-                    SEMICOLON.header.responsiveMenuClass(),
-                    SEMICOLON.initialize.modal(),
-                    SEMICOLON.customization.onLoad();
+                    WEBBEES.widget.parallax(),
+                    WEBBEES.widget.loadFlexSlider(),
+                    WEBBEES.widget.html5Video(),
+                    WEBBEES.widget.ticker(),
+                    WEBBEES.header.responsiveMenuClass(),
+                    WEBBEES.initialize.modal(),
+                    WEBBEES.customization.onLoad();
             },
         });
     let i,
@@ -1562,13 +1562,13 @@ var SEMICOLON = SEMICOLON || {};
         ne = 0,
         te = 0,
         se = 0;
-    e(document).ready(SEMICOLON.documentOnReady.init),
-        l.on("load", SEMICOLON.documentOnLoad.init),
+    e(document).ready(WEBBEES.documentOnReady.init),
+        l.on("load", WEBBEES.documentOnLoad.init),
         l.on("resize", function () {
             let i = e(this);
             clearTimeout(a),
                 (a = setTimeout(function () {
-                    i.width() !== L && SEMICOLON.documentOnResize.init();
+                    i.width() !== L && WEBBEES.documentOnResize.init();
                 }, 250));
         });
 })(jQuery),

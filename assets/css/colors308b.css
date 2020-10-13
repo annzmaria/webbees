@@ -572,7 +572,35 @@ h4.gradient-title:hover {
 		margin-top: 50px;
 		margin-bottom: 70px;
 	}
-
+	.multicol-t1 {
+		display: block;
+	}
+	.single_image_wrapper {
+		left: 66%;
+	}
+	.hero__background{
+		display: none;
+	}
+	#about{
+		padding-bottom: 0 !important;
+	}
+}
+.animate-slide-item h4{
+	color: #fcba38;
+}
+.owl-carousel .owl-dots, .owl-carousel .owl-nav {
+    display: inline-grid;
+    top: 35%;
+    position: absolute;
+    margin: 0;
+    right: 0;
+}
+.owl-carousel .owl-dots .owl-dot{
+	background-color: #fcba38;
+	width: 3px;
+    height: 25px;
+    border-radius: unset;
+    margin: 15px 4px 3px;
 }
 
 .bootstrap-switch .bootstrap-switch-handle-on.bootstrap-switch-themecolor,

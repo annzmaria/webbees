@@ -140,7 +140,7 @@ input.switch-toggle-flat:checked + label::after,
     stroke: #fff;
 }
 #header-wrap{
-	background: url(http://localhost/webbees/assets/images/wq3-1-1.png) no-repeat center;
+	background: url(../images/wq3-1-1.webp) no-repeat center;
     background-position-x: 62%;
     background-position-y: 246%;
 }
@@ -476,7 +476,7 @@ h4.gradient-title:hover {
 }
 
 .bg-curve{
-	background: url(../images/others/Wave_From_Right_829x590.png) no-repeat center;
+	background: url(../images/others/Wave_From_Right_829x590.webp) no-repeat center;
     background-position-x: right;
     background-position-y: 0;
 }
@@ -488,7 +488,7 @@ h4.gradient-title:hover {
 	display: none;
 }
 #footer{
-	background: url(../images/others/footer-bg2.png) center top / cover;
+	background: url(../images/others/footer-bg2.webp) center top / cover;
     background-position-x: 0;
 }
 .single_image_wrapper{

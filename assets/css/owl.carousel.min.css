@@ -9,7 +9,7 @@
   
 
 /* Slider 2 */
-.section.slider-2{background-image:url(../images/portfolio_bg.jpg);background-position:right top;background-repeat:no-repeat;background-size:cover;overflow:hidden}
+.section.slider-2{background-image:url(../images/portfolio_bg.webp);background-position:right top;background-repeat:no-repeat;background-size:cover;overflow:hidden}
 .slider-2 h4{line-height:30px;margin-bottom:0}
 .slider-2 h1{line-height:66px;color:#fff}
 .slider-2 p{color:#fff}
